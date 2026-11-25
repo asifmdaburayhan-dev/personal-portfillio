@@ -1,0 +1,47 @@
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    background-color: antiquewhite;
+    padding: 10px;
+
+}
+
+.skills-header{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(3 ,130px);
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 10px;
+   
+    
+}
+
+li{
+    list-style: none;
+    background-color: #6c5ce7;
+    color: white;
+    padding: 20px;
+    border: 1px solid green;
+    width: 130px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.ALLIMAGE{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    
+}

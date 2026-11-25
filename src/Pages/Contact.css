@@ -1,0 +1,45 @@
+.contact{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: antiquewhite;
+    padding: 10px;
+
+}
+
+.contacts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contactheader{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.contactfirst{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.imageone{
+    width: 40px;
+}
+
+.imagesecond{
+    width: 40px;
+}
+
+.contactsecond{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}

@@ -1,0 +1,21 @@
+.About{
+    margin: 5px;
+    background-color: antiquewhite;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.about{
+    text-align: end;
+    margin: 10px;
+    
+    
+}
+
+.about-header{
+    font-size: 40px;
+    font-weight: bold;
+}
