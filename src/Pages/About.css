@@ -1,0 +1,59 @@
+.About{
+    margin: 5px;
+    background-color: antiquewhite;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.about{
+    text-align: end;
+    margin: 10px;
+
+
+}
+
+.about-header{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/* Responsive CSS */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .About {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .about {
+        margin: 8px;
+    }
+
+    .about-header {
+        font-size: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .About {
+        flex-direction: column;
+        padding: 12px;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .about {
+        text-align: center;
+        margin: 5px;
+    }
+
+    .about-header {
+        font-size: 24px;
+    }
+}

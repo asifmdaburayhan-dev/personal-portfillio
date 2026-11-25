@@ -1,0 +1,108 @@
+.project{
+    /* background-color: aqua; */
+    /* display: flex; */
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* padding: 40px; */
+}
+
+.projectsecond{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    gap: 15px;
+    padding: 10px;
+}
+
+.projectheader{
+    display: block;
+}
+
+.projectfour{
+    margin-right: 10px;
+}
+
+.projectthird{
+    /* background-color: blue; */
+    display: block;
+}
+
+.header{
+    background-color: aqua;
+    font-size: 25px;
+    font-weight: bold;
+    width: 500px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 380px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+}
+.projectul{
+    display: grid;
+    grid-template-columns: repeat(4 ,130px);
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* Responsive CSS */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .projectsecond {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .header {
+        width: 80%;
+        font-size: 22px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projectul {
+        grid-template-columns: repeat(3, 130px);
+        gap: 10px;
+    }
+
+    .projectfour {
+        margin-right: 5px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .project {
+        margin-top: 15px;
+    }
+
+    .projectsecond {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .header {
+        width: 90%;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 8px 5px;
+    }
+
+    .projectul {
+        grid-template-columns: repeat(2, minmax(0, 130px));
+        gap: 10px;
+    }
+
+    .projectfour {
+        margin-right: 0;
+    }
+}

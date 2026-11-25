@@ -1,0 +1,98 @@
+.contact{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: antiquewhite;
+    padding: 10px;
+
+}
+
+.contacts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contactheader{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.contactfirst{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.imageone{
+    width: 40px;
+}
+
+.imagesecond{
+    width: 40px;
+}
+
+.contactsecond{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* Responsive CSS */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .contact {
+        padding: 15px;
+    }
+
+    .contacts {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .contactheader {
+        font-size: 22px;
+        margin-top: 150px;
+    }
+
+    .imageone,
+    .imagesecond {
+        width: 35px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .contact {
+        padding: 10px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contactheader {
+        font-size: 20px;
+        margin-top: 100px;
+    }
+
+    .contactfirst,
+    .contactsecond {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .imageone,
+    .imagesecond {
+        width: 30px;
+    }
+}
