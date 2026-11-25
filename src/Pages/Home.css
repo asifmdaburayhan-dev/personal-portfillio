@@ -1,88 +1,220 @@
-.home{
-    background-color: antiquewhite;
-    padding: 10px;
+
+/* Home Section */
+
+.home {
+    --home-bg: #f8fafc;
+    --home-text: #172033;
+    --home-muted: #64748b;
+    --home-accent: #2563eb;
+    --home-card: #ffffff;
+
+    background-color: var(--home-bg);
+    color: var(--home-text);
+
+    padding: 80px 8%;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
     margin-top: 20px;
+    min-height: 500px;
 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.home2{
-    display: block;
-    margin-top: 140px;
-    margin-left: 20px;
+
+/* Dark Theme */
+
+.dark .home {
+    --home-bg: #0f172a;
+    --home-text: #f8fafc;
+    --home-muted: #cbd5e1;
+    --home-accent: #60a5fa;
+    --home-card: #1e293b;
 }
-.home-img{
-    width: 500px;
-    height: 420px;
-    border-radius: 10px;
-    margin-left: 100px;
+
+/* Home Content */
+
+.home2 {
+    flex: 1;
+    max-width: 600px;
 }
-.home-heading{
-    font-size: 45px;
-    margin-bottom: 5px;
+
+/* Badge */
+
+.home-badge {
+    display: inline-block;
+    background-color: var(--home-card);
+    color: var(--home-accent);
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Heading */
+
+.home-heading {
+    font-size: 46px;
     font-weight: bold;
-
-}
-.home-pragraph{
-   font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 12px;
 }
 
+.home-heading span {
+    color: var(--home-accent);
+}
 
-/* Responsive CSS */
+/* Subheading */
+
+.home-subheading {
+    font-size: 26px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+/* Paragraph */
+
+.home-pragraph {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--home-muted);
+    margin-bottom: 28px;
+}
+
+/* Buttons */
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.home-btn {
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background-color: var(--home-accent);
+    color: white;
+}
+
+.primary-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid var(--home-accent);
+    color: var(--home-accent);
+}
+
+.secondary-btn:hover {
+    background-color: var(--home-accent);
+    color: white;
+}
+
+/* Social Links */
+
+.home-social {
+    display: flex;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.home-social a {
+    text-decoration: none;
+    color: var(--home-muted);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.home-social a:hover {
+    color: var(--home-accent);
+}
+
+/* Image */
+
+.home-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img {
+    width: 100%;
+    max-width: 430px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
 
 /* Tablet */
+
 @media (max-width: 768px) {
+
     .home {
-        align-items: center;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .home2 {
-        margin-top: 80px;
-        margin-left: 10px;
-    }
-
-    .home-img {
-        width: 45%;
-        height: auto;
-        margin-left: 10px;
+        padding: 55px 5%;
+        gap: 25px;
     }
 
     .home-heading {
-        font-size: 30px;
+        font-size: 32px;
     }
 
-    .home-pragraph {
-        font-size: 16px;
+    .home-subheading {
+        font-size: 22px;
+    }
+
+    .home-img {
+        height: 320px;
     }
 }
 
 /* Mobile */
+
 @media (max-width: 480px) {
+
     .home {
-        flex-direction: column;
-        align-items: center;
-        padding: 12px;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 35px 18px;
+        gap: 30px;
     }
 
     .home2 {
-        margin-top: 30px;
-        margin-left: 5px;
-        text-align: center;
-    }
-
-    .home-img {
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-        margin-left: 0;
+        margin: 0;
     }
 
     .home-heading {
-        font-size: 26px;
+        font-size: 29px;
+    }
+
+    .home-subheading {
+        font-size: 20px;
     }
 
     .home-pragraph {
         font-size: 15px;
     }
+
+    .home-img {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .home-buttons,
+    .home-social {
+        justify-content: center;
+    }
+
 }

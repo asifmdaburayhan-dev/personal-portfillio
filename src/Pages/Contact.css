@@ -1,98 +1,198 @@
-.contact{
-    display: block;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: antiquewhite;
-    padding: 10px;
 
+/* Contact Section */
+
+.contact {
+    --contact-bg: #f8fafc;
+    --contact-text: #172033;
+    --contact-muted: #64748b;
+    --contact-accent: #2563eb;
+    --contact-card: #ffffff;
+    --contact-border: #e2e8f0;
+
+    background-color: var(--contact-bg);
+    color: var(--contact-text);
+
+    padding: 75px 8%;
+    margin-top: 20px;
+
+    min-height: 400px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.contacts{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+/* Dark Mode */
+
+.dark .contact {
+    --contact-bg: #0f172a;
+    --contact-text: #f8fafc;
+    --contact-muted: #cbd5e1;
+    --contact-accent: #60a5fa;
+    --contact-card: #1e293b;
+    --contact-border: #334155;
 }
 
-.contactheader{
-    font-weight: bold;
-    font-size: 25px;
+/* Heading */
+
+.contact-heading {
     text-align: center;
-    margin-top: 200px;
+    margin-bottom: 45px;
 }
 
-.contactfirst{
+.contact-badge {
+    display: inline-block;
+    padding: 8px 17px;
+
+    background-color: var(--contact-card);
+    color: var(--contact-accent);
+
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.contactheader {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.contactheader span {
+    color: var(--contact-accent);
+}
+
+.contact-heading p {
+    color: var(--contact-muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Contact Cards */
+
+.contacts {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-.imageone{
-    width: 40px;
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    width: 100%;
+    max-width: 380px;
+    min-height: 110px;
+
+    padding: 20px;
+
+    background-color: var(--contact-card);
+    border: 1px solid var(--contact-border);
+    border-radius: 14px;
+
+    text-decoration: none;
+    color: var(--contact-text);
+
+    transition: 0.3s ease;
 }
 
-.imagesecond{
-    width: 40px;
+/* Hover Effect */
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--contact-accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-.contactsecond{
+/* Icons */
+
+.contact-icon {
+    width: 55px;
+    height: 55px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+
+    background-color: var(--contact-bg);
+    border-radius: 12px;
+    flex-shrink: 0;
 }
 
+.imageone,
+.imagesecond {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
 
-/* Responsive CSS */
+/* Contact Information */
+
+.contact-info h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: var(--contact-accent);
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: var(--contact-muted);
+    overflow-wrap: anywhere;
+}
 
 /* Tablet */
-@media (max-width: 768px) {
-    .contact {
-        padding: 15px;
-    }
 
-    .contacts {
-        gap: 25px;
-        flex-wrap: wrap;
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 55px 5%;
     }
 
     .contactheader {
-        font-size: 22px;
-        margin-top: 150px;
+        font-size: 32px;
     }
 
-    .imageone,
-    .imagesecond {
-        width: 35px;
+    .contacts {
+        gap: 18px;
     }
+
 }
 
 /* Mobile */
+
 @media (max-width: 480px) {
+
     .contact {
-        padding: 10px;
+        padding: 40px 18px;
+    }
+
+    .contactheader {
+        font-size: 29px;
+    }
+
+    .contact-heading p {
+        font-size: 14px;
     }
 
     .contacts {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
 
-    .contactheader {
-        font-size: 20px;
-        margin-top: 100px;
+    .contact-card {
+        max-width: 100%;
+        padding: 15px;
     }
 
-    .contactfirst,
-    .contactsecond {
-        gap: 8px;
-        flex-wrap: wrap;
+    .contact-info h3 {
+        font-size: 15px;
     }
 
-    .imageone,
-    .imagesecond {
-        width: 30px;
+    .contact-info p {
+        font-size: 12px;
     }
+
 }

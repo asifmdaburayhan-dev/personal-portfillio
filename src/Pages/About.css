@@ -1,59 +1,245 @@
-.About{
-    margin: 5px;
-    background-color: antiquewhite;
-    padding: 10px;
+
+/* About Section */
+
+.About {
+    --about-bg: #f8fafc;
+    --about-text: #172033;
+    --about-muted: #64748b;
+    --about-accent: #2563eb;
+    --about-card: #ffffff;
+    --about-border: #e2e8f0;
+
+    margin: 20px 5px 5px;
+    padding: 75px 8%;
+
+    background-color: var(--about-bg);
+    color: var(--about-text);
+
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: space-between;
+    gap: 50px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.about{
-    text-align: end;
+/* Dark Mode */
+
+.dark .About {
+    --about-bg: #0f172a;
+    --about-text: #f8fafc;
+    --about-muted: #cbd5e1;
+    --about-accent: #60a5fa;
+    --about-card: #1e293b;
+    --about-border: #334155;
+}
+
+/* About Content */
+
+.about {
+    flex: 1;
+    max-width: 620px;
     margin: 10px;
-
-
 }
 
-.about-header{
-    font-size: 40px;
+/* Badge */
+
+.about-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 30px;
+
+    background-color: var(--about-card);
+    color: var(--about-accent);
+
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Heading */
+
+.about-header {
+    font-size: 42px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
+.about-header span {
+    color: var(--about-accent);
+}
 
-/* Responsive CSS */
+/* Paragraph */
+
+.about-description {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--about-muted);
+    margin-bottom: 25px;
+    white-space: pre-line;
+}
+
+/* Details */
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.about-detail-card {
+    background-color: var(--about-card);
+    border: 1px solid var(--about-border);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.about-detail-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--about-accent);
+}
+
+.about-detail-card h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+    color: var(--about-accent);
+}
+
+.about-detail-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--about-muted);
+}
+
+/* Button */
+
+.about-btn {
+    display: inline-block;
+    padding: 12px 23px;
+
+    background-color: var(--about-accent);
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* Image */
+
+.about-image-wrapper {
+    flex: 1;
+    max-width: 480px;
+    position: relative;
+}
+
+.about-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Caption */
+
+.about-image-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    background-color: rgba(15, 23, 42, 0.88);
+    color: white;
+
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.about-image-caption h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.about-image-caption p {
+    font-size: 13px;
+    color: #cbd5e1;
+}
 
 /* Tablet */
-@media (max-width: 768px) {
-    .About {
-        padding: 15px;
-        gap: 15px;
-    }
 
-    .about {
-        margin: 8px;
+@media (max-width: 768px) {
+
+    .About {
+        padding: 50px 5%;
+        gap: 25px;
     }
 
     .about-header {
-        font-size: 30px;
+        font-size: 32px;
     }
+
+    .about-description {
+        font-size: 14px;
+    }
+
+    .about-img {
+        height: 330px;
+    }
+
 }
 
 /* Mobile */
+
 @media (max-width: 480px) {
+
     .About {
         flex-direction: column;
-        padding: 12px;
-        margin-top: 20px;
-        gap: 10px;
+        padding: 35px 18px;
+        gap: 30px;
+        text-align: center;
     }
 
     .about {
-        text-align: center;
-        margin: 5px;
+        margin: 0;
     }
 
     .about-header {
-        font-size: 24px;
+        font-size: 29px;
     }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .about-image-wrapper {
+        width: 100%;
+    }
+
+    .about-img {
+        height: 280px;
+    }
+
+    .about-image-caption {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
 }
